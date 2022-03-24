@@ -3,7 +3,7 @@ properties([pipelineTriggers([githubPush()])])
 pipeline {
     environment {
         // name of the image without tag
-        dockerRepo = "shclub/edu1"
+        dockerRepo = "juno2/edu1"
         dockerCredentials = 'docker_ci'
         dockerImageVersioned = ""
         dockerImageLatest = ""
@@ -20,7 +20,7 @@ pipeline {
                  //branches: [[name: '*/master']],
                  //branches: [[name: 'refs/tags/${TAG}']],
                  userRemoteConfigs: [[
-                    url: 'https://github.com/shclub/edu1.git',
+                    url: 'https://github.com/yunvo/edu1.git',
                     credentialsId: 'github_ci', 
                  ]]
                 ])
